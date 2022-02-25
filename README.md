@@ -1,12 +1,12 @@
 
-## ARCHER2 python course
+## ARCHER2 for data scientists course
 
 Welcome to the ARCHER2 for data scientists course. ARCHER2 https://www.archer2.ac.uk/ is
 the UK national supercomputing service.
 
 #### Local details for the online course
 
-Timetable & location are in [./2022-online.md]
+Timetable & location are in [./2022-online.md](2022-online.md)
 
 
 #### What you will need
