@@ -24,7 +24,7 @@ Lecture content copies are provided in the the `lectures` sub-directory.
 
 #### Examples
 
-Practical example code is in examples
+Practical exercise code is in the `exercises` directory.
 
 #### ARCHER2
 
