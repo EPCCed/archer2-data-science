@@ -1,0 +1,38 @@
+IOR START
+   api=MPIIO
+   repetitions=1
+   multiFile=0
+   interTestDelay=5
+   readFile=0
+   writeFile=1
+   filePerProc=1
+   checkWrite=1
+   checkRead=0
+   keepFile=0
+   quitOnError=0
+   segmentCount=1
+   singleXferAttempt=0
+   individualDataSets=0
+   verbose=1
+   collective=1
+   preallocate=0
+   useFileView=0
+   keepFileWithError=0
+   setTimeStampSignature=0
+   useSharedFilePointer=0
+   useStridedDatatype=0
+   uniqueDir=0
+   fsync=0
+   storeFileOffset=0
+   maxTimeDuration=60
+   useExistingTestFile=0
+   useO_DIRECT=1
+   showHints=1
+   showHelp=0
+   transferSize=16mb
+   reorderTasksConstant=0
+   testFile=data/iorTest
+
+RUN
+IOR STOP
+
