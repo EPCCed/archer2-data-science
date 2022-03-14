@@ -12,34 +12,37 @@ def pi_chunk(n, lower, upper):
         p = step * sum(4.0/(1.0 + ((i + 0.5) * (i + 0.5) * step * step)) for i in range(lower, upper))
         return p
 
-num_steps = 100000000 # number of slices
 
-# Default to 4 worker
-workers = 4
+if __name__=='__main__':
 
-print("Calculating PI using:\n  " + str(num_steps) + " slices")
-print("  " + str(workers) + " workers")
+    num_steps = 100000000 # number of slices
 
-start = time.time()
+    # Default to 4 worker
+    workers = 8
 
-#client = Client(processes=False, n_workers=workers)  # start local workers as threads
+    print("Calculating PI using:\n  " + str(num_steps) + " slices")
+    print("  " + str(workers) + " workers")
 
-stop = time.time()
+    start = time.time()
 
-print("Dask setup time ",stop - start,"seconds")
+    client = Client(processes=True, n_workers=workers)  # start local workers as threads
 
-start = time.time()
+    stop = time.time()
 
-num_steps_range = [num_steps] * workers
-lower_range =  [int(a * (num_steps/workers)) for a in range(workers)]
-upper_range =  [int((a + 1) * (num_steps/workers)) for a in range(workers)]
-upper_range[workers-1] =  num_steps
+    print("Dask setup time ",stop - start,"seconds")
 
-futures = client.map(pi_chunk, num_steps_range, lower_range, upper_range)
+    start = time.time()
 
-results = client.gather(futures)
-pi = sum(results)
-stop = time.time()
+    num_steps_range = [num_steps] * workers
+    lower_range =  [int(a * (num_steps/workers)) for a in range(workers)]
+    upper_range =  [int((a + 1) * (num_steps/workers)) for a in range(workers)]
+    upper_range[workers-1] =  num_steps
 
-print("pi: ", pi)
-print("The calculation took", stop - start,"seconds")
+    futures = client.map(pi_chunk, num_steps_range, lower_range, upper_range)
+
+    results = client.gather(futures)
+    pi = sum(results)
+    stop = time.time()
+
+    print("pi: ", pi)
+    print("The calculation took", stop - start,"seconds")
