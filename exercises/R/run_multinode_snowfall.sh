@@ -5,12 +5,11 @@
 #SBATCH --time=0:5:0
 #SBATCH --partition=standard
 #SBATCH --qos=short
-#SBATCH --account=z19
 #SBATCH --hint=nomultithread
 
 module load cray-R
-export R_LIBS_USER=/work/z19/z19/adrianj/Rinstall
-export PATH=$PATH:/work/z19/z19/adrianj/Rinstall/snow
+export R_LIBS_USER=/work/ta055/$USER/Rinstall
+export PATH=$PATH:/work/ta055/ta055/$USER/Rinstall/snow
 
 export OMP_NUM_THREADS=1
 
