@@ -10,8 +10,8 @@
 module load cray-R
 # The paths below may need changed if you have installed your R packages (particularly Snow) elsewhere
 # Remember, we need the R packages installed on /work to be able to use them on the compute nodes on ARCHER2
-export R_LIBS_USER=/work/ta055/ta055/$USER/Rinstall
-export PATH=$PATH:/work/ta055/ta055/$USER/Rinstall/snow
+export R_LIBS_USER=/work/ta065/ta065/$USER/Rinstall
+export PATH=$PATH:/work/ta065/ta065/$USER/Rinstall/snow
 
 export OMP_NUM_THREADS=1
 
