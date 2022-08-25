@@ -10,8 +10,9 @@ cluster = SLURMCluster(cores=128,
                        walltime="00:10:00",
                        shebang="#!/bin/bash --login",
                        local_directory='$PWD',
+                       interface='hsn0',
                        env_extra=['module load cray-python',
-                                  'export PYTHONUSERBASE=/work/XXX/XXX/XXXXXXX/.local/',
+                                  'export PYTHONUSERBASE=/work/XXXXXXX/.local/',
                                   'export PATH=$PYTHONUSERBASE/bin:$PATH',
                                   'export PYTHONPATH=$PYTHONUSERBASE/lib/python3.8/site-packages:$PYTHONPATH'])
 
