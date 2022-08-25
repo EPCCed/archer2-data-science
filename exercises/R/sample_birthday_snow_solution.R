@@ -1,5 +1,4 @@
-nmax = 50
-nworkers <- as.numeric(Sys.getenv("SLURM_NPROCS"))
+nmax <- as.numeric(Sys.getenv("SLURM_NPROCS"))
 
 cl <- getMPIcluster()
 
