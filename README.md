@@ -6,7 +6,7 @@ the UK national supercomputing service.
 
 #### Local details for the online course
 
-Timetable & location are in [here](2022-online.md)
+Timetable & location are in [here](2023-online.md)
 
 
 #### What you will need
@@ -28,4 +28,4 @@ Practical exercise code is in the `exercises` directory.
 
 #### ARCHER2
 
-Details of access to ARCHER2 will be provided on the day.
+Details of access to ARCHER2 will be provided prior to the course.
