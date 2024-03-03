@@ -6,7 +6,7 @@ the UK national supercomputing service.
 
 #### Local details for the online course
 
-Timetable & location are in [here](2023-online.md)
+Timetable & location are in [here](2024-online.md)
 
 
 #### What you will need
