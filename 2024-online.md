@@ -17,6 +17,7 @@ Location: Online
 15:00 – Exercise: Dask on ARCHER2
 15:30 – Break
 16:00 – L04: Parallel R on ARCHER2
-17:00 – Exercise: Parallel R
+16:30 – Exercise: Parallel R
+17:00 – Summary 
 17:30 – Finish
 ```
